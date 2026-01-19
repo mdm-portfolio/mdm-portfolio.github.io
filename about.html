@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About & Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F3EFE0;
+            --text-main: #3E2723;
+            --text-light: #6D4C41;
+            --accent: #D4A373;
+        }
+        body { font-family: 'Lato', sans-serif; margin: 0; background-color: var(--bg-color); color: var(--text-main); }
+        
+        header { display: flex; justify-content: space-between; padding: 30px 50px; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: bold; }
+        nav a { margin-left: 30px; color: var(--text-main); text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+        nav a:hover { color: var(--accent); }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Membagi halaman jadi 2 kolom (Kiri Bio, Kanan Form) */
+            gap: 60px;
+        }
+
+        .bio h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-top: 0; line-height: 1.2; }
+        .bio p { color: var(--text-light); font-size: 1.1rem; margin-bottom: 20px; }
+
+        .form-area h2 { font-family: 'Playfair Display', serif; margin-top: 0; }
+        
+        /* FORM GAYA MAHAL (Minimalist) */
+        input, textarea {
+            width: 100%;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #D7CCC8; /* Hanya garis bawah */
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            color: var(--text-main);
+            transition: 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-bottom: 2px solid var(--text-main); /* Garis jadi gelap saat diketik */
+        }
+
+        button {
+            background-color: var(--text-main);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover { background-color: var(--accent); }
+
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; } /* Agar rapi di HP */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">PORTFOLIO.</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="logos.html">Logos</a>
+            <a href="posters.html">Posters</a>
+            <a href="typography.html">Typography</a>
+            <a href="about.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="bio">
+            <h1>Hello, I'm <br> Marvella.</h1>
+            <p>I am a creative designer specializing in warm, organic visual identities. My work blends structure with emotion.</p>
+            <p>Based in Jakarta, creating digital experiences that leave a lasting impression.</p>
+        </div>
+
+        <div class="form-area">
+            <h2>Let's Connect</h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea rows="4" placeholder="Your Message"></textarea>
+                <button type="button" onclick="alert('Message Sent!')">Send</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

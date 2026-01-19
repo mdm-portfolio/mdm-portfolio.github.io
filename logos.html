@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <style>
+        /* --- WARNA SAMA DENGAN INDEX --- */
+        :root {
+            --bg-color: #F3EFE0;
+            --card-bg: #FFFFFF;
+            --text-main: #3E2723;
+            --text-light: #6D4C41;
+            --accent: #D4A373;
+        }
+        body { font-family: 'Lato', sans-serif; margin: 0; background-color: var(--bg-color); color: var(--text-main); }
+        
+        /* HEADER (Sama) */
+        header { display: flex; justify-content: space-between; padding: 30px 50px; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: bold; color: var(--text-main); }
+        nav a { margin-left: 30px; color: var(--text-main); text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+
+        /* GALLERY STYLES */
+        .page-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin: 50px 0;
+            color: var(--text-main);
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsif */
+            gap: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 15px;
+            box-shadow: 0 10px 30px rgba(62, 39, 35, 0.05); /* Bayangan super halus */
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+        }
+
+        /* EFEK HOVER YANG KEREN */
+        .card:hover {
+            transform: translateY(-10px); /* Naik ke atas saat ditunjuk */
+            box-shadow: 0 20px 40px rgba(62, 39, 35, 0.15);
+        }
+
+        .image-frame {
+            width: 100%;
+            height: 350px; /* Tinggi seragam agar rapi */
+            overflow: hidden;
+            background-color: #EFEBE0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Gambar mengisi penuh kotak */
+            transition: transform 0.5s ease;
+        }
+
+        /* Gambar zoom-in saat hover */
+        .card:hover .image-frame img {
+            transform: scale(1.05);
+        }
+
+        .info {
+            padding: 20px 10px 10px;
+            text-align: center;
+        }
+
+        .info h3 {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .info p {
+            margin-top: 10px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">PORTFOLIO.</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="logos.html">Logos</a>
+            <a href="posters.html">Posters</a>
+            <a href="typography.html">Typography</a>
+            <a href="about.html">Contact</a>
+        </nav>
+    </header>
+
+    <h1 class="page-title">Logo Designs</h1>
+
+    <div class="gallery-container">
+        
+        <div class="card">
+            <div class="image-frame">
+                <img src="images/logo1.png" alt="Bread & Brew Logo">
+            </div>
+            <div class="info">
+                <h3>Bread & Brew</h3>
+                <p>A playful monogram combining a croissant and coffee cup for a morning bakery.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-frame">
+                <img src="images/logo2.png" alt="Blend & Brew Logo">
+            </div>
+            <div class="info">
+                <h3>Blend & Brew</h3>
+                <p>Artisan milk tea branding featuring organic leaf elements and warm earth tones.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-frame">
+                <img src="images/logo3.png" alt="Sushi Harmony Logo">
+            </div>
+            <div class="info">
+                <h3>Sushi Harmony</h3>
+                <p>Cultural emblem design using Koi fish to form an 'S', symbolizing balance and freshness.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

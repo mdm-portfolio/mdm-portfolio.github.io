@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Creative Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS VARIABLES (Sistem Warna) --- */
+        :root {
+            --bg-color: #F3EFE0;
+            --card-bg: #FFFFFF;
+            --text-main: #3E2723;
+            --text-light: #6D4C41;
+            --accent: #D4A373;
+            --accent-hover: #8D6E63;
+        }
+
+        /* --- GLOBAL STYLES --- */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Playfair Display', serif;
+        }
+
+        a { text-decoration: none; transition: 0.3s; }
+
+        /* --- NAVIGATION --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 50px;
+            background: transparent; /* Transparan agar menyatu */
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--text-main);
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            margin-left: 30px;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        nav a:hover { color: var(--accent); }
+
+        /* Garis bawah animasi saat hover menu */
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s;
+        }
+        nav a:hover::after { width: 100%; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin: 0;
+            color: var(--text-main);
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-top: 20px;
+            max-width: 600px;
+        }
+
+        .btn {
+            margin-top: 40px;
+            padding: 15px 40px;
+            background-color: var(--text-main);
+            color: white;
+            font-family: 'Lato', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 2px solid var(--text-main);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--text-main);
+            transform: translateY(-3px); /* Efek naik sedikit */
+            box-shadow: 0 10px 20px rgba(62, 39, 35, 0.2);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-light);
+            font-size: 0.8rem;
+            border-top: 1px solid #E0D8C0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">PORTFOLIO.</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="logos.html">Logos</a>
+            <a href="posters.html">Posters</a>
+            <a href="typography.html">Typography</a>
+            <a href="about.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Visual <br> Storytelling</h1>
+        <p>Designing aesthetics that blend function with emotion. Welcome to my creative journey.</p>
+        <a href="posters.html" class="btn">Explore Work</a>
+    </section>
+
+    <footer>
+        &copy; 2026 My Creative Portfolio. Design inspired by Artisanal Aesthetics.
+    </footer>
+
+</body>
+</html>
